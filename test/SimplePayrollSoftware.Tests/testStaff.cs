@@ -16,7 +16,7 @@ namespace SimplePayrollSoftware.Tests
 
             staff.CalculatePay();
 
-            Assert.Equal(0, staff.BasicPay);
+            Assert.Equal(0, staff.TotalPay);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace SimplePayrollSoftware.Tests
 
             staff.CalculatePay();
 
-            Assert.Equal(16, staff.BasicPay);
+            Assert.Equal(16, staff.TotalPay);
         }
 
         [Fact]
