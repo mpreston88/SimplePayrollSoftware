@@ -5,27 +5,27 @@ using Xunit;
 
 namespace SimplePayrollSoftware.Tests
 {
-    public class TestManager
+    public class TestAdmin
     {
         [Fact]
         public void TestCalculatePay()
         {
             string name = "test";
-            Manager manager = new Manager(name);
-            manager.HoursWorked = 161;
+            Admin admin = new Admin(name);
+            admin.HoursWorked = 161;
 
-            manager.CalculatePay();
+            admin.CalculatePay();
 
-            Assert.Equal(9050, manager.TotalPay);
+            Assert.Equal(4845.5F, admin.TotalPay);
         }
 
         [Fact]
         public void TestToString()
         {
             string name = "test";
-            Manager manager = new Manager(name);
+            Admin admin = new Admin(name);
 
-            Assert.Contains("Allowance = 0", manager.ToString());
+            Assert.Contains("Overtime = 0", admin.ToString());
         }
 
     }
