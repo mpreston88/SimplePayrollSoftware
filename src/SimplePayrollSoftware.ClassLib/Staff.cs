@@ -41,7 +41,6 @@ namespace SimplePayrollSoftware.ClassLib
 
         public override string ToString(){
             return "hourlyRate = " + hourlyRate +
-            " hWorked = " + hWorked +
             " TotalPay = " + TotalPay + 
             " BasicPay = " + BasicPay +
             " NameOfStaff = " + NameOfStaff +
