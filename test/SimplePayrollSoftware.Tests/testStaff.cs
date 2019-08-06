@@ -38,8 +38,6 @@ namespace SimplePayrollSoftware.Tests
             string name = "test";
             float rate = 8;
             Staff staff = new Staff(name, rate);
-
-            staff.CalculatePay();
             
             Assert.Contains("hourlyRate = 8", staff.ToString());
             Assert.Contains("NameOfStaff = test", staff.ToString());
