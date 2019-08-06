@@ -8,7 +8,7 @@ namespace SimplePayrollSoftware.Tests
     public class TestStaff
     {
         [Fact]
-        public void TestCalculatePay()
+        public void TestCalculatePayWithNoWorkedHours()
         {
             string name = "test";
             float rate = 8;
@@ -17,6 +17,19 @@ namespace SimplePayrollSoftware.Tests
             staff.CalculatePay();
 
             Assert.Equal(0, staff.BasicPay);
+        }
+
+        [Fact]
+        public void TestCalculatePayWithWorkedHours()
+        {
+            string name = "test";
+            float rate = 8;
+            Staff staff = new Staff(name, rate);
+            staff.HoursWorked = 2;
+
+            staff.CalculatePay();
+
+            Assert.Equal(16, staff.BasicPay);
         }
 
         [Fact]
