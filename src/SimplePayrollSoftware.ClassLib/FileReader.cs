@@ -16,14 +16,14 @@ namespace SimplePayrollSoftware.ClassLib
                 using (StreamReader sr = new StreamReader(path)){
                     while (!sr.EndOfStream){
                         string[] results = sr.ReadLine().Split(separator[0]);
-                        if (result[1].ToLower() == "admin"){
-                            myStaff.Add(new Admin(result[0]));
+                        if (results[1].ToLower() == "admin"){
+                            myStaff.Add(new Admin(results[0]));
                         } 
-                        else if (result[1].ToLower() == "manager"){
-                            myStaff.Add(new Manager(result[0]));
+                        else if (results[1].ToLower() == "manager"){
+                            myStaff.Add(new Manager(results[0]));
                         }
                         else{
-                            Console.WriteLine("Role " + result[1] + " not a valid role.");
+                            Console.WriteLine("Role " + results[1] + " not a valid role.");
                         }
                     }
                     sr.Close();

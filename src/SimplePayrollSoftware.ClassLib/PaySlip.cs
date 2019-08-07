@@ -44,11 +44,11 @@ namespace SimplePayrollSoftware.ClassLib
                     sw.WriteLine("Houra Worked: {0}", stf.HoursWorked);
                     sw.WriteLine("");
                     sw.WriteLine("Basic Pay: {0:C}", stf.BasicPay);
-                    if (sw.GetType() == typeof(Manager)){
+                    if (stf.GetType() == typeof(Manager)){
                         sw.WriteLine("Allowance: {0}", ((Manager)stf).Allowance);
                     }
-                    else if (sw.GetType() == typeof(Admin)){
-                        sw.WriteLine(" Overtime Pay: {0}", ((Admin)stf).Overtime);
+                    else if (stf.GetType() == typeof(Admin)){
+                        sw.WriteLine("Overtime Pay: {0}", ((Admin)stf).Overtime);
                     }
                     else {
                         continue;
